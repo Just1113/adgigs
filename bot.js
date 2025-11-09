@@ -7,7 +7,7 @@ bot.start(async (ctx) => {
   await ctx.replyWithPhoto(
     { url: "http://webnar.serv00.net/bot.png" },
     {
-      caption: `Welcome, ${name} 💎👋
+      caption: `Welcome, ${name} 👋
 
 Want to earn coins from gigs? 💰  
 With *Adgigs Mini App*, you can earn by completing ads, joining channels, or visiting websites.
