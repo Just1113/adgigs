@@ -12,7 +12,7 @@ bot.start(async (ctx) => {
 Want to earn coins from gigs? 💰  
 With *Adgigs Mini App*, you can earn by completing ads, joining channels, or visiting websites.
 
-If you're an advertiser, promote your projects starting from just ₦1.
+If you're an advertiser, promote your projects starting from just $1.
 
 🚀 Tap below to begin:`,
       parse_mode: "Markdown",
@@ -25,5 +25,24 @@ If you're an advertiser, promote your projects starting from just ₦1.
   );
 });
 
-bot.launch();
+import express from "express";
+const app = express();
+
+app.use(express.json());
+
+app.use(bot.webhookCallback("/webhook"));
+
+const port = process.env.PORT || 3000;
+
+// Replace YOUR_BOT_TOKEN with your actual Telegram bot token
+await bot.telegram.setWebhook(`https://adgigs.onrender.com/webhook`);
+
+app.get("/", (req, res) => {
+  res.send("✅ Adgigs Bot is live on Render!");
+});
+
+app.listen(port, () => {
+  console.log(`🚀 Server running on port ${port}`);
+});
+
 console.log("✅ Adgigs Bot is running...");
