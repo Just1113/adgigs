@@ -5,7 +5,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start(async (ctx) => {
   const name = ctx.from.first_name || "User";
   await ctx.replyWithPhoto(
-    { url: "https://your-banner-image-link.com/adgigs-banner.jpg" },
+    { url: "http://webnar.serv00.net/bot.png" },
     {
       caption: `Welcome, ${name} 💎👋
 
