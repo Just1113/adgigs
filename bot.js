@@ -16,7 +16,7 @@ If you're an advertiser, promote your projects starting from just $1.
 
 🚀 Tap below to begin:`,
       parse_mode: "Markdown",
-      protect_content: true,
+      protect_content: false,
       ...Markup.inlineKeyboard([
         [Markup.button.webApp("🚀 Launch App", "https://webnar.serv00.net")],
         [Markup.button.url("📢 Our Channel", "https://t.me/ad_gigs")]
